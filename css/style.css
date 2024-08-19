@@ -1,0 +1,1048 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css");
+
+body {
+  background-color: #000000;
+  color: #fff;
+}
+.wrap {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  padding-bottom: 100px;
+}
+
+.section {
+  position: relative;
+  /* border-bottom: solid 10px #fff; */
+  width: 100%;
+  height: 100vh;
+  background-color: #000000;
+  color: #fff;
+}
+/* background-video */
+.video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1; /* 배경으로 설정하여 콘텐츠 위에 표시 */
+}
+
+#background-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+  object-fit: cover; /* 비율 유지하면서 크기 조정 */
+}
+
+#section {
+  width: 100%;
+  height: 100vh;
+  background-size: cover; /* 이미지를 요소의 크기에 맞춤 */
+  background-position: center; /* 이미지를 중앙에 위치 */
+  background-repeat: no-repeat; /* 이미지를 반복하지 않음 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#section2 {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.navbar.visible {
+  display: block; /* 보이도록 설정 */
+}
+.header {
+  position: fixed;
+  z-index: 1000;
+  /* opacity: 0; */
+  width: 100%;
+  height: 110px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  box-shadow: rgba(60, 55, 55, 0.25);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: transform 0.5s ease-in-out;
+  font-family: "Work Sans", sans-serif;
+  color: #000000;
+  opacity: 1; /* 초기 상태: 보임 */
+}
+
+.header.hide {
+  display: none;
+}
+
+.header a {
+  color: #000000;
+}
+.header a:hover {
+  color: #fff;
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  opacity: 0.9;
+}
+
+.slide-up {
+  transform: translateY(-100%);
+}
+
+.menu {
+  position: relative;
+  z-index: 999;
+  width: 952px;
+  height: 37px;
+  font-size: 30px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  left: 45%;
+}
+.menu :hover {
+  color: #fff;
+}
+/* header end */
+
+/* page 1 start */
+.typewriter {
+  z-index: 1;
+  font-size: 80px;
+  font-weight: bold;
+  white-space: nowrap;
+  width: fit-content;
+  animation: blink-caret 0.75s step-end infinite;
+}
+/* page 1 end */
+
+/* page 2 start */
+.bg {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* padding-top: 500px; */
+  border: none solid transparent;
+}
+.one {
+  position: relative;
+  width: 1000px;
+  height: 1000px;
+  top: 420px;
+  margin: 0 auto;
+  background-color: #000000;
+  border-radius: 50%;
+  box-shadow: 0 0 20px #acacac, 20px 0 80px #f0f, -20px 0 80px #0ff,
+    inset 0 0 50px #fff, inset -50px 0 80px #f0f, inset 50px 0 80px #0ff,
+    inset -50px 0 300px #f0f, inset 50px 0 300px #0ff;
+  animation: rotate 5s linear infinite, slideDown 1s ease-in-out forwards;
+  animation-delay: 0s, 0s; /* 슬라이드 애니메이션을 5초 후에 시작 */
+}
+@keyframes slideDown {
+  0% {
+    transform: translateY(-50%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
+
+/* @keyframes grow {
+  0% {
+    transform: scale(0.2); 
+  }
+  100% {
+    transform: scale(1); 
+  }
+} */
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Ensure rotate starts after grow finishes */
+.one {
+  animation: grow 5s ease-in-out forwards, rotate 5s linear infinite;
+  animation-delay: 0s, 5s;
+  cursor: pointer;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+/* 회전 애니메이션 */
+@keyframes quick-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* 애니메이션이 적용된 상태 */
+.one.rotating {
+  animation: quick-rotate 1s linear; /* 빠른 회전 애니메이션 */
+  transform: scale(1.2); /* 클릭 시 확대 효과 추가 (선택 사항) */
+}
+.ment {
+  position: relative;
+  bottom: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* margin-left: 290px; */
+}
+/* 텍스트 효과 */
+.irregular-blink {
+  position: absolute;
+  /* color: coloNeon; */
+  font-size: 80px;
+  font-family: "Michroma", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-transform: uppercase;
+  text-align: center;
+  text-shadow: 0 0 10px #fff, 0 0 20px #a3a3a3, 0 0 70px #96657d,
+    0 0 50px #a8a8a8, 0 0 40px #897a8b, 0 0 50px #271827, 0 0 40px #22d3ff;
+  animation: flicker-animation 8s infinite, neon-effect 1.5s infinite alternate;
+}
+
+/* 텍스트 애니메이션 효과 */
+
+@keyframes neon-effect {
+  0%,
+  100% {
+    text-shadow: 0 0 10px #fff, 0 0 20px #a3a3a3, 0 0 70px #e70074,
+      0 0 50px #a8a8a8, 0 0 40px #7c0394, 0 0 50px #271827, 0 0 40px #22d3ff;
+  }
+  50% {
+    text-shadow: 0 0 20px #fff, 0 0 30px #a3a3a3, 0 0 80px #e70074,
+      0 0 60px #a8a8a8, 0 0 50px #7c0394, 0 0 60px #271827, 0 0 50px #22d3ff;
+  }
+}
+/* 깜빡임 */
+@keyframes flicker-animation {
+  0% {
+    opacity: 0;
+  }
+  5% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0;
+  }
+  15% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 0;
+  }
+  72% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* 텍스트 효과 끝 */
+/* page2 end */
+
+/* page 3 start */
+#section3 {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url("../images/page3.png");
+  /* background-size: cover;  */
+  background-position: center; /* 이미지를 중앙에 위치 */
+  background-repeat: no-repeat; /* 이미지를 반복하지 않음 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#one3 {
+  position: relative;
+  width: 750px;
+  height: 750px;
+  top: 420px;
+  left: -820px;
+  margin: 0 auto;
+  filter: brightness(0.8);
+  border-radius: 50%;
+  box-shadow: 0 0 20px #acacac, 20px 0 80px #f0f, -20px 0 80px #0ff,
+    0 0 50px #fff, -50px 0 80px #f0f, 50px 0 80px #0ff, -50px 0 300px #f0f,
+    50px 0 300px #0ff;
+  /* animation: grow 5s ease-in-out forwards, rotate 5s linear infinite; */
+}
+.ment1 {
+  position: absolute;
+  /* width: 830px;
+  height: 240px; */
+  font-family: "Work Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  top: 160px;
+  margin-left: 38%;
+  text-align: center;
+  bottom: 400px;
+}
+
+.mainment {
+  position: relative;
+  font-size: 80px;
+  transform: translateX(-100%);
+  opacity: 0; /* 초기에는 투명하게 설정 */
+  transition: transform 0.7s ease-out, opacity 0.7s ease-out;
+}
+.mainment.show {
+  /* 애니메이션이 적용된 상태 */
+  transform: translateX(0); /* 원래 위치로 이동 */
+  opacity: 1; /* 완전히 보이게 설정 */
+}
+
+.subment {
+  position: relative;
+  font-size: 30px;
+}
+/* page 3 end */
+
+/* page 4 start */
+#one4 {
+  position: absolute;
+  width: 570px;
+  height: 570px;
+  top: 310px;
+  left: 50%;
+}
+#section1 {
+  position: relative;
+  width: 100%;
+  height: 100vw;
+}
+.section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+.section1 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 154px;
+}
+.section1-1 {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  top: 80px;
+  margin-left: 250px;
+}
+
+.proprofile {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.profile {
+  font-size: 50px;
+  font-family: "Michroma", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  width: 367px;
+  height: 83px;
+  margin-top: 100px;
+  position: relative;
+  text-align: center;
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: black;
+  }
+}
+
+.point {
+  margin: 0;
+}
+
+.index {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 200px;
+  font-size: 32px;
+  margin-left: 100px;
+  left: -85px;
+}
+.index p {
+  font-weight: 600;
+}
+.skill {
+  position: relative;
+}
+.skill p {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.contct p {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.contact {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 458px;
+  height: 460px;
+  justify-content: space-between;
+}
+.call {
+  position: relative;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.section1-2 {
+  position: relative;
+}
+/* .section1-2 img {
+  position: relative;
+  margin-top: 300px;
+  margin-right: 185px;
+} */
+
+/* page 4 work page start */
+/* swiper */
+/* 초기 상태 - 화면 밖에서 시작 */
+.mySwiper1,
+.mySwiper3 {
+  opacity: 0;
+  transform: translateX(-100%); /* 왼쪽에서 시작 */
+  transition: all 1s ease;
+}
+.mySwiper2 {
+  opacity: 0;
+  transform: translateX(100%); /* 왼쪽에서 시작 */
+  transition: all 1s ease;
+}
+
+/* 화면에 나타났을 때 적용될 클래스 */
+.mySwiper1.show,
+.mySwiper3.show {
+  opacity: 1;
+  transform: translateX(0); /* 원래 위치로 슬라이드 */
+}
+.mySwiper2.show {
+  opacity: 1;
+  transform: translateX(0); /* 원래 위치로 슬라이드 */
+}
+#section4 {
+  width: 100%;
+  height: 300vh;
+}
+.contents {
+  position: relative;
+  top: 50px;
+  display: flex;
+  gap: 20px;
+}
+
+/* side-text */
+.side-text {
+  position: relative;
+  top: 250px;
+}
+#side-text1 {
+  position: relative;
+  top: 250px;
+  -left: 500px;
+}
+.ogwebsite {
+  position: relative;
+  display: flex;
+  justify-self: center;
+  align-items: center;
+  z-index: 999;
+  width: 150px;
+  height: 40px;
+}
+#ogwebsite-link,
+#ogwebsite-link2,
+#ogwebsite-link3 {
+  position: relative;
+  width: 150px;
+  height: 40px;
+}
+
+#ogwebsite-link::before,
+#ogwebsite-link2::before,
+#ogwebsite-link3::before {
+  content: "";
+  position: absolute;
+  top: -2px; /* 테두리 두께에 따라 조정 */
+  left: -2px; /* 테두리 두께에 따라 조정 */
+  width: calc(100% + 4px); /* 2px * 2 (상하좌우) */
+  height: calc(100% + 4px); /* 2px * 2 (상하좌우) */
+  border: 2px solid transparent;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+#ogwebsite-link:hover,
+#ogwebsite-link2:hover,
+#ogwebsite-link3:hover {
+  border: 2px solid transparent;
+  background: linear-gradient(
+    60deg,
+    hsl(224, 85%, 66%),
+    hsl(269, 85%, 66%),
+    hsl(314, 85%, 66%),
+    hsl(359, 85%, 66%),
+    hsl(44, 85%, 66%),
+    hsl(89, 85%, 66%),
+    hsl(134, 85%, 66%),
+    hsl(179, 85%, 66%)
+  );
+  background-size: 300% 300%;
+  background-position: 0 50%;
+  border-radius: 10px;
+  animation: moveGradient 4s alternate infinite;
+}
+
+@keyframes moveGradient {
+  50% {
+    background-position: 100% 50%;
+  }
+}
+.ogwebsite,
+.ogwebsite1 {
+  position: relative;
+  top: 5%;
+  font-size: 15px;
+  font-weight: bold;
+}
+.ogwebsite::after {
+  content: "→";
+  margin-left: 10px;
+}
+
+.ogwebsite1::before {
+  content: "←";
+  margin-right: 10px;
+}
+
+.tool {
+  position: relative;
+  font-size: 16px;
+  top: 48%;
+}
+/* swiper img */
+#web1,
+#web2,
+#web3,
+#app1,
+#app2,
+#app3,
+#coding1,
+#coding2,
+#coding3 {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#web1 {
+  background-image: url("../images/web1.png");
+}
+#web2 {
+  background-image: url("../images/web2.png");
+}
+#web3 {
+  background-image: url("../images/web3.png");
+}
+#app1 {
+  background-image: url("../images/app3.png");
+}
+#app2 {
+  background-image: url("../images/app1.png");
+}
+#app3 {
+  background-image: url("../images/app2.png");
+}
+#coding1 {
+  background-image: url("../images/coding1.png");
+}
+#coding2 {
+  background-image: url("../images/coding2.png");
+}
+#coding3 {
+  background-image: url("../images/coding3.png");
+}
+/* img hover */
+#design1,
+#design2,
+#design3,
+#design4,
+#design5 {
+  transition: transform 0.3s ease, filter 0.3s ease, background-color 0.3s ease;
+}
+
+#design1:hover,
+#design2:hover,
+#design3:hover,
+#design4:hover,
+#design5:hover {
+  transform: scale(0.95);
+  filter: brightness(0.85);
+}
+/* swiper cursor */
+
+.hover-arrow {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  font-size: 24px;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.swiper-slide:hover ~ .hover-arrow {
+  opacity: 1;
+  transform: translateY(-50%) translateX(10px); /* 약간 오른쪽으로 이동하는 효과 */
+}
+/* swiper button*/
+.swiper-button-prev {
+  color: #000000 !important;
+}
+.swiper-button-next {
+  color: #000000 !important;
+}
+/* swiper hover */
+.process-view {
+  position: absolute;
+  z-index: 10;
+  width: 200px;
+  height: 60px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 10;
+}
+.process-view a {
+  position: relative;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+/* Process View에 화살표 추가 */
+.process-view::after {
+  content: "→";
+  margin-left: 10px;
+}
+
+/* 호버 시 Process View 표시 */
+.swiper-slide:hover .process-view {
+  opacity: 1;
+}
+.swiper-slide:hover .Website-view {
+  opacity: 1;
+}
+/* swiper */
+.swiper {
+  width: 1204px;
+  height: 704px;
+  margin-top: 258px;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+  background: #424242 !important;
+}
+
+#section4 {
+  width: 100%;
+  margin-top: 400px;
+  position: relative;
+}
+/* 상단 work */
+.top {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.one1 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 254px;
+  height: 254px;
+  border-radius: 50%;
+  box-shadow: 0 0 50px #fff;
+  opacity: 0.8;
+  /* animation: rotate 10s linear infinite; */
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.work {
+  font-family: "Michroma", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  position: absolute;
+  font-size: 42px;
+  letter-spacing: -2px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wave {
+  opacity: 0.3;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid #9e9e9e;
+  width: 350px;
+  height: 350px;
+  -webkit-transform-origin: 50% 48%;
+  transform-origin: 50% 48%;
+  border-radius: 43%;
+  -webkit-animation: drift 3000ms infinite linear;
+  animation: drift 3000ms infinite linear;
+  z-index: 80;
+}
+.wave.-two {
+  -webkit-animation: drift 7000ms infinite linear;
+  animation: drift 7000ms infinite linear;
+  opacity: 0.1;
+  border: 2px solid #e3e3e3;
+}
+@keyframes drift {
+  0% {
+    /* -webkit-transform: rotate(0deg) scale(0, 0); */
+    transform: translate(-50%, -50%) rotate(0deg) scale(0.5, 0.5);
+    opacity: 1;
+  }
+  100% {
+    /* -webkit-transform: rotate(360deg) scale(2, 2); */
+    transform: translate(-50%, -50%) rotate(360deg) scale(1.5, 1.5);
+    opacity: 0;
+  }
+}
+.web,
+.coding {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  float: right;
+}
+.app {
+  position: relative;
+  float: left;
+}
+.web span,
+.coding span {
+  position: relative;
+  margin-left: 150px;
+}
+.web span,
+.app span,
+.coding span {
+  font-family: "Zen Dots", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  position: relative;
+  top: 250px;
+  font-size: 80px;
+}
+.app span {
+  margin-left: 40px;
+}
+
+/* design 작업물 */
+.designwork {
+  position: relative;
+  color: white;
+  top: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  font-family: "Michroma", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.line {
+  position: relative;
+  height: 360px;
+  border-right: solid 2px #fff;
+  left: 120px;
+}
+#design {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  top: 200px;
+}
+
+.designbox {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.imgbox {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 150vh;
+}
+/* design slide image */
+#design1,
+#design2,
+#design3,
+#design4,
+#design5 {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#design1 {
+  background-image: url("../images/design1.png");
+}
+
+#design2 {
+  background-image: url("../images/design2.png");
+}
+#design3 {
+  background-image: url("../images/design3.png");
+}
+#design4 {
+  background-image: url("../images/design4.png");
+}
+#design5 {
+  background-image: url("../images/design5.png");
+}
+/* 기본 슬라이드 스타일 */
+.designswiper .swiper-slide {
+  transition: transform 0.3s ease, z-index 0.3s ease;
+  /* 필요한 경우 높이와 너비 조정 */
+}
+
+/* 슬라이드가 활성화될 때 커지도록 */
+.designswiper .swiper-slide-active {
+  transform: scale(1.1); /* 슬라이드 크기 조정 */
+  z-index: 10; /* 활성 슬라이드를 최상단으로 */
+}
+
+.designswiper {
+  position: relative;
+  width: 1920px;
+  height: 734px;
+  top: 200px;
+  padding-left: 100px !important;
+}
+.swiper-slide {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.d-slide {
+  border-radius: 15px;
+}
+.modal1 {
+  width: 100%;
+  height: 100%;
+}
+.swiper-slide img {
+  display: block;
+  width: 534px;
+  height: 734px;
+  object-fit: cover;
+  background-color: #000000;
+}
+/* footer */
+.footer {
+  width: 100%;
+  height: 690px;
+  margin-top: 300px;
+}
+/* loop text */
+.loop-container {
+  position: relative;
+  top: 200px;
+  width: 100%;
+  height: 60px;
+  background-color: rgba(217, 217, 217, 1);
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  /* z-index: 20; */
+}
+.loop-text {
+  display: flex;
+  align-items: center;
+  /* gap: 50px; */
+  animation: scroll 60s linear infinite;
+}
+.loop-text p {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 900;
+  margin-left: 100px;
+  color: #444444;
+  white-space: nowrap;
+  display: inline-block;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+/* loop text end */
+.sjw {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 150px;
+  top: 150px;
+  letter-spacing: -2px;
+  font-weight: 800;
+  color: #adadad;
+  opacity: 5;
+  font-style: italic;
+}
+.end {
+  position: relative;
+  text-align: center;
+  padding: 0 60px;
+  padding-bottom: 50px;
+}
+.e-ment {
+  position: relative;
+  margin-bottom: 30px;
+  top: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.e-ment li > a {
+  position: relative;
+  width: 260px;
+  height: 50px;
+  font-size: 32px;
+  font-weight: 600;
+  text-align: center;
+}
+.g-icon {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.icon {
+  right: 10%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.icon li a {
+  display: inline-block;
+  transition: transform 0.3s ease; /* 부드러운 전환 효과 */
+  position: relative;
+  width: 67px;
+  height: 67px;
+}
+
+.icon li a:hover {
+  transform: rotate(-10deg); /* 마우스를 올렸을 때 기울어지는 효과 */
+}

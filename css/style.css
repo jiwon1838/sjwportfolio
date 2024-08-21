@@ -152,6 +152,10 @@ html {
     top: 310px;
     left: 15%;
   }
+  .one {
+    width: 55vw; /* 작은 화면에서 크기 조정 */
+    height: 55vw; /* 작은 화면에서 크기 조정 */
+  }
   div.section1-1 {
     position: relative;
     margin: 0;
@@ -206,12 +210,12 @@ html {
   .footer {
     position: relative;
     height: 450px !important;
- bottom: -100px !important;
+    bottom: -100px !important;
   }
 
   .footer > .sjw {
     position: relative;
-    font-size: 80px;
+    font-size: 70px;
   }
   .e-ment {
     position: relative;
@@ -241,7 +245,9 @@ html {
     align-items: center;
     gap: 51px;
   }
-
+  .irregular-blink {
+    top: 100px;
+  }
   /* Typewriter Text */
   .typewriter {
     font-size: 36px;
@@ -330,9 +336,9 @@ html {
 }
 .one {
   position: relative;
-  width: 1000px;
-  height: 1000px;
-  top: 420px;
+  width: 50vw; /* 기본 크기 */
+  height: 50vw; /* 기본 크기 */
+  top: 35vh; /* 기본 위치 */
   margin: 0 auto;
   background-color: #000000;
   border-radius: 50%;

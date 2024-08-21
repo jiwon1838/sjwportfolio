@@ -2,23 +2,24 @@
 
 body,
 html {
+  position: relative;
   background-color: #000000;
+  width: 100%;
   color: #fff;
+  margin: 0 auto;
 }
 .wrap {
   position: relative;
-  width: 100%;
   margin: 0 auto;
   padding-bottom: 100px;
 }
 
 .section {
   position: relative;
-  /* border-bottom: solid 10px #fff; */
   width: 100%;
   height: 100vh;
-  background-color: #000000;
   color: #fff;
+  margin: 0 auto;
 }
 /* background-video */
 .video-background {
@@ -254,8 +255,13 @@ html {
   }
 
   /* mainment */
+  .ment1 {
+    position: relative;
+    margin: 0 auto !important;
+  }
   .mainment.show {
     font-size: 50px;
+    bottom: 40px;
   }
   .mainment {
     font-size: 50px;
@@ -266,6 +272,26 @@ html {
   /* Navigation Menu */
   .menu {
     font-size: 24px;
+  }
+  #section2 #one4 {
+    position: absolute;
+    top: 310px;
+    left: 18%;
+    margin: 0 auto;
+  }
+  .one {
+    width: 50vw;
+    height: 50vw;
+  }
+  div.section1-1 {
+    position: relative;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .sjwprofile img {
+    display: none;
   }
   div.contents {
     position: relative;
@@ -339,6 +365,8 @@ html {
   width: 50vw; /* 기본 크기 */
   height: 50vw; /* 기본 크기 */
   top: 35vh; /* 기본 위치 */
+  max-width: 50vw;
+  max-height: 50vw;
   margin: 0 auto;
   background-color: #000000;
   border-radius: 50%;

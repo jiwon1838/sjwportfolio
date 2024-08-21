@@ -41,11 +41,11 @@ $(document).ready(function () {
       windowScrollTop < sectionOffsetTop + sectionHeight;
 
     if (isSectionVisible && !scrolledToSection1) {
-      // 7초 후에 #section1으로 스크롤 이동 (한 번만 실행)
+      // 4초 후에 #section1으로 스크롤 이동 (한 번만 실행)
       scrolledToSection1 = true;
       setTimeout(() => {
         $("html, body").scrollTop($section1.offset().top); // 부드럽지 않게 즉시 이동
-      }, 4000); // 7초 후 #section1으로 스크롤 이동
+      }, 4000); // 4초 후 #section1으로 스크롤 이동
     }
   }
 

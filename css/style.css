@@ -1,6 +1,7 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css");
 
-body {
+body,
+html {
   background-color: #000000;
   color: #fff;
 }
@@ -120,6 +121,190 @@ body {
   color: #fff;
 }
 /* header end */
+
+/* 반응형 */
+@media (max-width: 768px) {
+  /* Header */
+  .header {
+    display: flex;
+    height: 80px;
+    font-size: 18px;
+  }
+  .menu {
+    position: relative;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    right: 800px;
+  }
+  /* Typewriter Text */
+  .typewriter {
+    font-size: 18px;
+  }
+  /* page 2 one */
+  #section2 {
+    margin-top: 200px;
+  }
+  #section2 #one4 {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    top: 310px;
+    left: 15%;
+  }
+  div.section1-1 {
+    position: relative;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 2%;
+  }
+  .sjwprofile img {
+    display: none;
+  }
+  /* mainment */
+  .mainment {
+    font-size: 30px;
+  }
+  .subment {
+    font-size: 15px;
+  }
+
+  /* Swiper Slides */
+  .swiper-slide {
+    font-size: 14px;
+  }
+  .contents span {
+    margin: 0 !important;
+  }
+  .webspan,
+  .appspan,
+  .codingspan {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .appspan {
+    position: relative;
+    margin-right: 550px;
+  }
+
+  /* Design Sections */
+  #design1,
+  #design2,
+  #design3,
+  #design4,
+  #design5 {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 200px;
+  }
+  /* footer */
+  .footer {
+    position: relative;
+    height: 450px !important;
+ bottom: -100px !important;
+  }
+
+  .footer > .sjw {
+    position: relative;
+    font-size: 80px;
+  }
+  .e-ment {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+  .e-ment li > a {
+    font-size: 30px !important;
+  }
+  .fashion {
+    display: none;
+  }
+}
+@media (max-width: 1024px) {
+  /* Header */
+  .header {
+    height: 100px;
+    font-size: 28px;
+  }
+  .menu {
+    margin-right: 1200px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 51px;
+  }
+
+  /* Typewriter Text */
+  .typewriter {
+    font-size: 36px;
+  }
+
+  /* mainment */
+  .mainment.show {
+    font-size: 50px;
+  }
+  .mainment {
+    font-size: 50px;
+  }
+  span.subment {
+    font-size: 25px;
+  }
+  /* Navigation Menu */
+  .menu {
+    font-size: 24px;
+  }
+  div.contents {
+    position: relative;
+    justify-content: center;
+    align-items: center;
+  }
+  /* Swiper Slides */
+  .swiper-slide {
+    font-size: 16px;
+  }
+  .contents span {
+    margin: 0 !important;
+  }
+  .webspan,
+  .appspan,
+  .codingspan {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .appspan {
+    position: relative;
+    margin-right: 550px;
+  }
+  /* Design Sections */
+  #design1,
+  #design2,
+  #design3,
+  #design4,
+  #design5 {
+    height: 600px;
+    object-fit: contain;
+  }
+
+  /* footer */
+  .footer {
+    margin-top: 100px !important;
+  }
+
+  .sjw {
+    position: relative;
+    font-size: 30px;
+  }
+}
 
 /* page 1 start */
 .typewriter {
@@ -350,12 +535,10 @@ body {
 #section1 {
   position: relative;
   width: 100%;
-  height: 100vw;
 }
 .section {
   position: relative;
   width: 100%;
-  height: 100vh;
 }
 .section1 {
   position: relative;
@@ -822,6 +1005,12 @@ body {
   position: relative;
   margin-left: 150px;
 }
+.webspan,
+.appspan,
+.codingspan {
+  position: relative;
+  top: 250px;
+}
 .web span,
 .app span,
 .coding span {
@@ -829,7 +1018,7 @@ body {
   font-weight: 400;
   font-style: normal;
   position: relative;
-  top: 250px;
+  /* top: 250px; */
   font-size: 80px;
 }
 .app span {

@@ -162,7 +162,6 @@ html {
     width: 500px;
     height: 500px;
     top: 310px;
-    left: 15%;
   }
   .one {
     width: 55vw; /* 작은 화면에서 크기 조정 */
@@ -174,7 +173,6 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
-    left: 2%;
   }
   .sjwprofile img {
     display: none;
@@ -283,7 +281,7 @@ html {
   #section2 #one4 {
     position: absolute;
     top: 310px;
-    left: 18%;
+
     margin: 0 auto;
   }
   .one {
@@ -571,8 +569,8 @@ html {
   position: absolute;
   width: 570px;
   height: 570px;
-  top: 310px;
-  left: 50%;
+  top: -150px;
+  left: -15%;
 }
 #section1 {
   position: relative;
@@ -635,8 +633,6 @@ html {
   flex-direction: column;
   gap: 200px;
   font-size: 32px;
-  margin-left: 100px;
-  left: -85px;
 }
 .index p {
   font-weight: 600;
@@ -1041,7 +1037,7 @@ html {
 }
 .app {
   position: relative;
-  width: 100%;
+  /* width: 100%; */
   float: left;
   overflow: hidden;
 }

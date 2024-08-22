@@ -27,17 +27,18 @@ html {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   overflow: hidden;
   z-index: -1; /* 배경으로 설정하여 콘텐츠 위에 표시 */
 }
 
 #background-video {
-  position: absolute;
+  position: relative;
   top: 50%;
   left: 50%;
-  min-width: 100%;
-  min-height: 100%;
+  width: 100%;
+  /* min-width: 100%; */
+  /* min-height: 100%; */
   width: auto;
   height: auto;
   transform: translate(-50%, -50%);
@@ -59,6 +60,7 @@ html {
   position: relative;
   width: 100%;
   height: 100vh;
+  background-color: #000000;
 }
 
 .navbar.visible {
@@ -124,6 +126,11 @@ html {
 /* header end */
 
 /* 반응형 */
+@media (max-width: 868px) {
+  #background-video {
+    position: relative;
+  }
+}
 @media (max-width: 768px) {
   /* Header */
   .header {
@@ -139,9 +146,13 @@ html {
     right: 800px;
   }
   /* Typewriter Text */
-  .typewriter {
+  /* .typewriter {
+    position: absolute;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
     font-size: 18px;
-  }
+  } */
   /* page 2 one */
   #section2 {
     margin-top: 200px;
@@ -249,10 +260,6 @@ html {
   .irregular-blink {
     top: 100px;
   }
-  /* Typewriter Text */
-  .typewriter {
-    font-size: 36px;
-  }
 
   /* mainment */
   .ment1 {
@@ -340,6 +347,7 @@ html {
 
 /* page 1 start */
 .typewriter {
+  position: absolute;
   z-index: 1;
   font-size: 80px;
   font-weight: bold;
@@ -705,6 +713,7 @@ html {
   position: relative;
   top: 50px;
   display: flex;
+
   gap: 20px;
 }
 
@@ -1032,7 +1041,9 @@ html {
 }
 .app {
   position: relative;
+  width: 100%;
   float: left;
+  overflow: hidden;
 }
 .web span,
 .coding span {
@@ -1097,6 +1108,7 @@ html {
   flex-direction: column;
   width: 100%;
   height: 150vh;
+  overflow: hidden;
 }
 /* design slide image */
 #design1,
@@ -1137,6 +1149,7 @@ html {
 .designswiper .swiper-slide-active {
   transform: scale(1.1); /* 슬라이드 크기 조정 */
   z-index: 10; /* 활성 슬라이드를 최상단으로 */
+  overflow: hidden;
 }
 
 .designswiper {
@@ -1145,6 +1158,7 @@ html {
   height: 734px;
   top: 200px;
   padding-left: 100px !important;
+  overflow: hidden;
 }
 .swiper-slide {
   text-align: center;
@@ -1182,6 +1196,7 @@ html {
   display: flex;
   align-items: center;
   gap: 50px;
+  overflow: hidden;
   /* z-index: 20; */
 }
 .loop-text {

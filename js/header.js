@@ -29,33 +29,33 @@ $(document).ready(function () {
     }
   }
 
-  // // #section이 화면에 보일 때 7초 후 #section1으로 스크롤 이동하는 함수
-  // function scrollToSection1() {
-  //   const sectionOffsetTop = $section.offset().top;
-  //   const sectionHeight = $section.outerHeight();
-  //   const windowScrollTop = $(window).scrollTop();
-  //   const windowHeight = $(window).height();
+  // #section이 화면에 보일 때 7초 후 #section1으로 스크롤 이동하는 함수
+  function scrollToSection1() {
+    const sectionOffsetTop = $section.offset().top;
+    const sectionHeight = $section.outerHeight();
+    const windowScrollTop = $(window).scrollTop();
+    const windowHeight = $(window).height();
 
-  //   const isSectionVisible =
-  //     windowScrollTop + windowHeight * 0.1 >= sectionOffsetTop &&
-  //     windowScrollTop < sectionOffsetTop + sectionHeight;
+    const isSectionVisible =
+      windowScrollTop + windowHeight * 0.1 >= sectionOffsetTop &&
+      windowScrollTop < sectionOffsetTop + sectionHeight;
 
-  //   if (isSectionVisible && !scrolledToSection1) {
-  //     // 4초 후에 #section1으로 스크롤 이동 (한 번만 실행)
-  //     scrolledToSection1 = true;
-  //     setTimeout(() => {
-  //       $("html, body").scrollTop($section1.offset().top); // 부드럽지 않게 즉시 이동
-  //     }, 4000); // 4초 후 #section1으로 스크롤 이동
-  //   }
-  // }
+    if (isSectionVisible && !scrolledToSection1) {
+      // 4초 후에 #section1으로 스크롤 이동 (한 번만 실행)
+      scrolledToSection1 = true;
+      setTimeout(() => {
+        $("html, body").scrollTop($section1.offset().top); // 부드럽지 않게 즉시 이동
+      }, 4000); // 4초 후 #section1으로 스크롤 이동
+    }
+  }
 
-  // // 스크롤 이벤트 핸들러 등록
-  // $(window).on("scroll", function () {
-  //   toggleHeader(); // 헤더 토글
-  //   scrollToSection1(); // #section1으로 스크롤
-  // });
+  // 스크롤 이벤트 핸들러 등록
+  $(window).on("scroll", function () {
+    toggleHeader(); // 헤더 토글
+    scrollToSection1(); // #section1으로 스크롤
+  });
 
-  // // 초기 스크롤 체크
-  // toggleHeader();
-  // scrollToSection1();
+  // 초기 스크롤 체크
+  toggleHeader();
+  scrollToSection1();
 });
